@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Books Form</title>
+</head>
+<body>
+    <h1>New Book Form</h1>
+
+    <a href="/books">Books Page</a>
+
+    <form action="/books/create" method="POST">
+        <label>Title:</label>
+        <input type="text" name="title" placeholder="Book XYZ" value="Book XYZ">
+
+        <label>Author:</label>
+        <select name="author_name">
+          <option value="A1">Author 1</option>
+          <option value="A2">Author 2</option>
+          <option value="A3">Author 3</option>
+        </select>
+
+        <button>Submit</button>
+    </form>
+
+</body>
+</html>

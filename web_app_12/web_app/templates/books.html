@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books Page</title>
+</head>
+<body>
+
+    <h1>Books Page</h1>
+    {% block content %}
+        <p>Hello, welcome to the books page</p>
+
+        <a href="/books/new">New Books</a>
+        {% if books %}
+            <ul>
+                {% for book in books %}
+                <li>{{ book["title"] }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+        <p>Books not found.</p>
+        {% endif %}
+    {% endblock %}
+
+</body>
+</html>
