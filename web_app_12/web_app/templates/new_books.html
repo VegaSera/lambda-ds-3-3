@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>New Books Form</title>
-</head>
-<body>
-    <h1>New Book Form</h1>
+<!-- web_app/templates/new_book.html -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>New Book Form</h2>
 
     <a href="/books">Books Page</a>
 
@@ -23,5 +21,4 @@
         <button>Submit</button>
     </form>
 
-</body>
-</html>
+{% endblock %}

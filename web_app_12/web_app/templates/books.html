@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- web_app/templates/books.html -->
+
+{% extends "layout.html" %}
+
+{% block title %}
     <title>Books Page</title>
-</head>
-<body>
+{% endblock %}
 
-    <h1>Books Page</h1>
-    {% block content %}
-        <p>Hello, welcome to the books page</p>
+{% block content %}
 
-        <a href="/books/new">New Books</a>
-        {% if books %}
-            <ul>
-                {% for book in books %}
-                <li>{{ book["title"] }}</li>
-                {% endfor %}
-            </ul>
-        {% else %}
+    <h2>Welcome to the Books Page</h2>
+
+    <p>{{ message }}</p>
+
+    {% if books %}
+        <ul>
+        {% for book in books %}
+            <li>{{ book["title"] }}</li>
+        {% endfor %}
+        </ul>
+
+    {% else %}
         <p>Books not found.</p>
-        {% endif %}
-    {% endblock %}
+    {% endif %}
 
-</body>
-</html>
+{% endblock %}
