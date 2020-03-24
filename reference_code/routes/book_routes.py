@@ -25,6 +25,7 @@ def create_book():
     print("FORM DATA:", dict(request.form))
 
     new_book = Book(title=request.form["title"], author_id=request.form["author_name"])
+    print(new_book)
     db.session.add(new_book)
     db.session.commit()
 

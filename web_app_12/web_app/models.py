@@ -10,6 +10,15 @@ class Book(db.Model):
     title = db.Column(db.String(128))
     author_id = db.Column(db.String(128))
 
+class Tweet(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    text = db.Column(db.String(400))
+    poster_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(128))
+
 def parse_records(database_records):
     """
     Parses database records into a clean json-like structure

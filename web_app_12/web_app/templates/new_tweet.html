@@ -1,0 +1,22 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>New Tweet Form</h2>
+
+    <a href="/tweets">Tweets Page</a>
+
+    <form action="/tweets/create" method="POST">
+        <label>Title:</label>
+        <input type="text" name="text" placeholder="Book XYZ" value="Book XYZ">
+
+        <label>Tweet Author:</label>
+        <input type="number" name="poster_id" placeholder="User ID number" value=1>
+
+        <label>Tweet Author Name:</label>
+        <input type="text" name="name" placeholder="Username" value="TwitterUser01">
+
+        <button>Submit</button>
+    </form>
+
+{% endblock %}
