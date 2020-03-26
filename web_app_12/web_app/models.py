@@ -18,6 +18,9 @@ class Tweet(db.Model):
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128))
+    location = db.Column(db.String(128))
+    follower_count = db.Column(db.Integer)
+    latest_tweet_id = db.Column(db.BigInteger)
 
 def parse_records(database_records):
     """
